@@ -36,11 +36,11 @@ const Product = () => {
   ];
 
   return (
-    <section id="product" className="py-20 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* What is CopMap */}
         <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             What is
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A0C4] to-[#0088a9]"> CopMap?</span>
           </h2>
@@ -59,7 +59,6 @@ const Product = () => {
             <div className="bg-white border-2 border-[#00A0C4] text-[#00A0C4] p-6 rounded-xl inline-block">
               <p className="text-xl font-semibold">CopMap solves this.</p>
             </div>
-
           </div>
         </div>
 

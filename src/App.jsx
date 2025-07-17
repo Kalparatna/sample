@@ -1,38 +1,78 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import Product from './components/Product';
-import Features from './components/Features';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Legal from './components/Legal'; 
+// Layout Components
+import Layout from './components/layout/Layout';
+
+// Page Components
+import HomePage from './pages/HomePage';
+import ProductPage from './pages/ProductPage';
+import FeaturesPage from './pages/FeaturesPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import LegalPage from './pages/LegalPage';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        {/* Landing Page */}
-        <Route
-          path="/"
-          element={
-            <div className="min-h-screen bg-white">
-              <Navigation />
-              <Hero />
-              <Product />
-              <Features />
-              <About />
-              <Contact />
-              <Footer />
-            </div>
-          }
-        />
+      <div className="min-h-screen bg-white">
+        <Toaster position="top-right" />
+        <Routes>
+          {/* Home Page */}
+          <Route
+            path="/"
+            element={
+              <Layout>
+                <HomePage />
+              </Layout>
+            }
+          />
 
-        {/* Legal Page */}
-        <Route path="/legal" element={<Legal />} />
-      </Routes>
+          {/* Product Page */}
+          <Route
+            path="/product"
+            element={
+              <Layout>
+                <ProductPage />
+              </Layout>
+            }
+          />
+
+          {/* Features Page */}
+          <Route
+            path="/features"
+            element={
+              <Layout>
+                <FeaturesPage />
+              </Layout>
+            }
+          />
+
+          {/* About Page */}
+          <Route
+            path="/about"
+            element={
+              <Layout>
+                <AboutPage />
+              </Layout>
+            }
+          />
+
+          {/* Contact Page */}
+          <Route
+            path="/contact"
+            element={
+              <Layout>
+                <ContactPage />
+              </Layout>
+            }
+          />
+
+          {/* Legal Page */}
+          <Route path="/legal" element={<LegalPage />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import CopMapLogo from '../assets/copmap.svg?react';
+import CopMapLogo from '../../assets/copmap.svg?react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -12,10 +14,16 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-    setIsOpen(false);
+  const navigationItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Product', path: '/product' },
+    { name: 'Features', path: '/features' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
+  const isActivePath = (path) => {
+    return location.pathname === path;
   };
 
   return (
@@ -27,23 +35,29 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center group">
+          <Link to="/" className="flex items-center group">
             <div className="w-[180px] h-[180px] flex items-center justify-center">
               <CopMapLogo className="w-full h-full" />
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {['product', 'features', 'about', 'contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 capitalize font-medium group focus:outline-none focus-visible:outline-none"
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`relative transition-all duration-300 capitalize font-medium group focus:outline-none focus-visible:outline-none ${
+                  isActivePath(item.path)
+                    ? 'text-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
               >
-                {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full"></span>
-              </button>
+                {item.name}
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 ${
+                  isActivePath(item.path) ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
+              </Link>
             ))}
             {/* Calendly Link */}
             <a
@@ -77,15 +91,20 @@ const Navigation = () => {
         }`}>
           <div className="bg-white/95 backdrop-blur-xl border-t border-gray-100 rounded-b-2xl shadow-xl">
             <div className="px-4 pt-4 pb-6 space-y-2">
-              {['product', 'features', 'about', 'contact'].map((item, index) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className="block w-full text-left px-4 py-2 text-gray-700 hover:text-blue-600 transition-all duration-300 capitalize font-medium focus:outline-none focus-visible:outline-none"
+              {navigationItems.map((item, index) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block w-full text-left px-4 py-2 transition-all duration-300 capitalize font-medium focus:outline-none focus-visible:outline-none ${
+                    isActivePath(item.path)
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-600'
+                  }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  {item}
-                </button>
+                  {item.name}
+                </Link>
               ))}
               {/* Calendly Link for Mobile */}
               <a

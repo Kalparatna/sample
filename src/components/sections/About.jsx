@@ -1,10 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Shield, Users, Award, Target, Zap, Globe,Building,
-  MapPinned,
-  GitBranch,
-  Siren,
-  UserCheck
-  } from 'lucide-react';
+import { Shield, Users, Award, Target, Zap, Globe, Building, MapPinned, GitBranch, Siren, UserCheck } from 'lucide-react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,8 +64,6 @@ const About = () => {
       delay: "0.8s"
     }
   ];
-  
-  
 
   const getColorClasses = (color) => {
     const colors = {
@@ -84,7 +77,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden" ref={sectionRef}>
+    <section className="py-20 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden" ref={sectionRef}>
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-gradient-to-br from-blue-400/10 to-indigo-600/10 rounded-full blur-3xl animate-pulse"></div>

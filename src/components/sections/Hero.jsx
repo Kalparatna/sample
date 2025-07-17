@@ -22,7 +22,6 @@ const WorkflowIcon = () => (
   </svg>
 );
 
-
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -46,14 +45,13 @@ const Hero = () => {
             <h1 className={`text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight transition-all duration-1000 delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
-          <span className="text-xl sm:text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#0B0046] to-[#0B0046] animate-gradient-x whitespace-nowrap">
-              Revolutionizing Law Enforcement
-            </span>
-            
-            <span className="block text-sm sm:text-xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#00A0C4] to-[#0088a9] animate-gradient-x">
-  Across the Nation
-</span>
-
+              <span className="text-xl sm:text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#0B0046] to-[#0B0046] animate-gradient-x whitespace-nowrap">
+                Revolutionizing Law Enforcement
+              </span>
+              
+              <span className="block text-sm sm:text-xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#00A0C4] to-[#0088a9] animate-gradient-x">
+                Across the Nation
+              </span>
             </h1>
 
             <p className={`text-xl text-gray-600 mb-8 max-w-xl leading-relaxed transition-all duration-1000 delay-400 ${
@@ -75,7 +73,6 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-x-full group-hover:translate-x-0"></div>
               </a>
 
-
               <button className="group border-2 border-[#00A0C4] text-[#00A0C4] px-8 py-4 rounded-xl text-lg font-semibold hover:bg-[#00A0C4] hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
                 <Play className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
                 Watch How It Works
@@ -90,7 +87,6 @@ const Hero = () => {
                 { icon: Users, value: '20L+', label: 'Officers Nationwide', color: '#00A0C4' },
                 { icon: Shield, value: '20K+', label: 'Police Stations', color: '#10b981' },
                 { icon: WorkflowIcon, value: '90%', label: 'Still Manual Operations', color: '#f59e0b' }
-
               ].map((stat, index) => (
                 <div key={index} className="group bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-white/50">
                   {typeof stat.icon === 'function' ? <stat.icon /> : <stat.icon className="h-8 w-8 mx-auto mb-3" style={{ color: stat.color }} />}
@@ -102,17 +98,16 @@ const Hero = () => {
           </div>
 
           <div className={`relative transition-all duration-1000 delay-500 ${
-  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-}`}>
-  <div className="relative z-10">
-    <img  
-      src="/police-hero.png"
-      alt="Police Illustration"
-      className="w-full max-w-md mx-auto drop-shadow-xl rounded-xl"
-    />
-  </div>
-</div>
-
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
+            <div className="relative z-10">
+              <img  
+                src="/police-hero.png"
+                alt="Police Illustration"
+                className="w-full max-w-md mx-auto drop-shadow-xl rounded-xl"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Bottom Callout */}

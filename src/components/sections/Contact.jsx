@@ -87,7 +87,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-[#00A0C4]/10 relative overflow-hidden" ref={sectionRef}>
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-[#00A0C4]/10 relative overflow-hidden" ref={sectionRef}>
       <Toaster position="top-right" />
       
       {/* Background Elements */}

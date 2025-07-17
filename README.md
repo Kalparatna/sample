@@ -1,4 +1,4 @@
-# CopMap - Multi-Page Website
+# CopMap
 
 A modern, responsive multi-page website built with React and Vite, featuring smooth animations and a clean, professional design.
 

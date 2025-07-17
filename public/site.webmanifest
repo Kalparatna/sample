@@ -1,0 +1,25 @@
+{
+  "name": "CopMap - Law Enforcement Automation Platform",
+  "short_name": "CopMap",
+  "description": "Revolutionary law enforcement automation platform for police operations management across India",
+  "icons": [
+    {
+      "src": "/Copmap-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Copmap-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#00A0C4",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en-IN"
+}

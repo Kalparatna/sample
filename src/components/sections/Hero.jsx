@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Play, ArrowRight, Users, Shield } from 'lucide-react';
+import { SoftwareApplicationSchema, FAQSchema } from '../common/StructuredData';
 
 // Badge Icon Component
 // Custom icon for "Still Manual Operations"
@@ -31,6 +32,9 @@ const Hero = () => {
 
   return (
     <section className="relative pt-24 pb-24 bg-gradient-to-br from-[#d0f3fc] via-white to-indigo-50 overflow-hidden">
+      <SoftwareApplicationSchema />
+      <FAQSchema />
+      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-32 -right-32 w-72 h-72 bg-[#00A0C4]/20 rounded-full blur-3xl animate-pulse"></div>

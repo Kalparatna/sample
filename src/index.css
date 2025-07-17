@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Animated gradient text */
+  .animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+  }
+
+  @keyframes gradient-x {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Custom drop shadow larger than Tailwind's default */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Extra-large backdrop blur */
+  .backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+  }
+
+  /* Staggered animation delay utilities */
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* light gray */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom,  #00A0C4, #106c86); /* blue-indigo gradient */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom,  #00A0C4, #106c86); /* darker blue */
+}
+
+/* Clean focus outlines */
+*:focus {
+  outline: none;
+}
+
+/* Enhanced focus ring for inputs and buttons */
+input:focus, textarea:focus, button:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); /* subtle blue ring */
+}

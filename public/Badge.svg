@@ -1,0 +1,4 @@
+<!-- Save this as public/badge-icon.svg -->
+<svg viewBox="0 0 24 24" fill="#FFC107" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 2L15 6H21L17 10L19 16L12 12L5 16L7 10L3 6H9L12 2Z"/>
+</svg>

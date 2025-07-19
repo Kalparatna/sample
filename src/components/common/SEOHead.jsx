@@ -10,7 +10,7 @@ const SEOHead = ({
   ogType = 'website',
   noindex = false 
 }) => {
-  const baseUrl = 'https://copmap.in';
+  const baseUrl = 'https://your-firebase-domain.web.app';
   const fullCanonical = canonical ? `${baseUrl}${canonical}` : baseUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 

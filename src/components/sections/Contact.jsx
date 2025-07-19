@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Phone, MapPin, Send, Clock, Shield, Award, Zap } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
+import { trackContactForm, trackDemoRequest } from '../../utils/analytics';
 
 const SERVICE_ID = 'service_jt665d5';
 const TEMPLATE_ID = 'template_nrhr0y6';
@@ -39,6 +40,7 @@ const Contact = () => {
     try {
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY);
       toast.success('Message sent successfully!');
+      trackContactForm('contact_page');
       setFormData({ name: '', email: '', organization: '', message: '' });
     } catch (error) {
       console.error('EmailJS error:', error);

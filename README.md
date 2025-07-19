@@ -205,42 +205,48 @@ The website is fully responsive with breakpoints:
 
 ## 🚀 Deployment
 
-### Build for Production
+### Firebase Hosting Deployment
+
+#### Quick Setup
 ```bash
+# Install Firebase CLI
+npm install -g firebase-tools
+
+# Login to Firebase
+firebase login
+
+# Initialize project
+firebase init hosting
+
+# Build and deploy
 npm run build
+firebase deploy --only hosting
 ```
 
-### Deploy to Netlify (Recommended)
-1. **Connect Repository**: Link your GitHub/GitLab repository to Netlify
-2. **Build Settings**:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-3. **Environment Variables**: Set any required environment variables
-4. **Deploy**: Automatic deployment on push to main branch
-5. **Custom Domain**: Configure your custom domain (copmap.in)
+#### Configuration
+1. **Update Firebase Project ID** in `.firebaserc`
+2. **Replace URLs** throughout the codebase with your Firebase domain
+3. **Configure Analytics** with your GA4 Measurement ID
+4. **Set up Custom Domain** (optional) in Firebase Console
 
-### Deploy to Vercel
-1. **Install Vercel CLI**: `npm i -g vercel`
-2. **Deploy**: Run `vercel` in project directory
-3. **Configure**: Follow prompts for domain and settings
-4. **Environment**: Set environment variables in Vercel dashboard
-
-### Deploy to Apache/Nginx
-1. **Build**: Run `npm run build`
-2. **Upload**: Upload `dist` folder contents to web server
-3. **Configure**: Use provided `.htaccess` for Apache or configure Nginx
-4. **SSL**: Ensure HTTPS is configured for production
+#### Firebase Features
+- ✅ **Optimized Hosting**: Fast global CDN
+- ✅ **Security Headers**: XSS protection and security policies
+- ✅ **Caching Strategy**: Optimized for performance
+- ✅ **SPA Routing**: Proper single-page app configuration
+- ✅ **Analytics Integration**: Google Analytics 4 ready
+- ✅ **Performance Monitoring**: Real user metrics
 
 ### Production Checklist
-- [ ] Update all URLs from localhost to production domain
-- [ ] Configure environment variables
-- [ ] Set up SSL certificate
-- [ ] Configure CDN (optional)
+- [ ] Update Firebase project configuration
+- [ ] Replace all URLs with your Firebase domain
+- [ ] Configure Google Analytics 4
 - [ ] Set up monitoring and analytics
 - [ ] Test all forms and functionality
 - [ ] Verify SEO meta tags and structured data
 - [ ] Submit sitemap to Google Search Console
-
+- [ ] Configure custom domain (optional)
+- [ ] Test performance with Lighthouse
 
 ## 🤝 Contributing
 

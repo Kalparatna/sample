@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import CopMapLogo from '../../assets/copmap.svg?react';
+import { trackDemoRequest } from '../../utils/analytics';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,6 +65,7 @@ const Navigation = () => {
               href="https://calendly.com/admin-copmap/30min"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackDemoRequest('header_button')}
               className="relative bg-[#00A0C4] text-white px-6 py-2.5 rounded-xl hover:bg-[#0088a9] transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden group focus:outline-none focus-visible:outline-none"
             >
               <span className="relative z-10">Request Demo</span>
@@ -111,6 +113,7 @@ const Navigation = () => {
                 href="https://calendly.com/admin-copmap/30min"
                 target="_blank"
                 rel="noopener noreferrer"
+               onClick={() => trackDemoRequest('mobile_menu')}
                 className="block w-full mt-4 bg-[#00A0C4] text-white px-6 py-3 rounded-xl hover:bg-[#0088a9] transition-all duration-300 font-semibold shadow-lg transform hover:scale-105 text-center focus:outline-none focus-visible:outline-none"
               >
                 Request Demo

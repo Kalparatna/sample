@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { HelmetProvider } from 'react-helmet-async';
+import GoogleAnalytics from './components/common/GoogleAnalytics';
 
 // Layout Components
 import Layout from './components/layout/Layout';
@@ -19,6 +20,7 @@ function App() {
     <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-white">
+          <GoogleAnalytics />
           <Toaster position="top-right" />
           <Routes>
             {/* Home Page */}

@@ -18,8 +18,8 @@ export const OrganizationSchema = () => {
     "@type": "Organization",
     "name": "EyeQlytics Technologies Pvt. Ltd.",
     "alternateName": "CopMap",
-    "url": "https://copmap.in",
-    "logo": "https://copmap.in/Copmap-logo.png",
+    "url": "https://your-firebase-domain.web.app",
+    "logo": "https://your-firebase-domain.web.app/Copmap-logo.png",
     "description": "Leading provider of law enforcement automation solutions in India",
     "foundingDate": "2023",
     "contactPoint": [
@@ -65,7 +65,7 @@ export const SoftwareApplicationSchema = () => {
     "@type": "SoftwareApplication",
     "name": "CopMap",
     "description": "Revolutionary law enforcement automation platform for police operations management across India",
-    "url": "https://copmap.in",
+    "url": "https://your-firebase-domain.web.app",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, iOS, Android",
     "softwareVersion": "2.0",
@@ -89,7 +89,7 @@ export const SoftwareApplicationSchema = () => {
       "Automated Documentation",
       "Mobile App Integration"
     ],
-    "screenshot": "https://copmap.in/police-hero.png",
+    "screenshot": "https://your-firebase-domain.web.app/police-hero.png",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",

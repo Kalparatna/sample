@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Play, ArrowRight, Users, Shield } from 'lucide-react';
 import { SoftwareApplicationSchema, FAQSchema } from '../common/StructuredData';
+import { trackDemoRequest } from '../../utils/analytics';
 
 // Badge Icon Component
 // Custom icon for "Still Manual Operations"
@@ -71,6 +72,7 @@ const Hero = () => {
                 href="https://calendly.com/admin-copmap/30min"
                 target="_blank"
                 rel="noopener noreferrer"
+               onClick={() => trackDemoRequest('hero_cta')}
                 className="group relative bg-[#00A0C4] text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-[#0088a9] transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden"
               >
                 <span className="relative z-10">Request a Demo</span>

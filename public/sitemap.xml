@@ -5,42 +5,42 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>https://copmap.in/</loc>
+    <loc>https://your-firebase-domain.web.app/</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://copmap.in/product</loc>
+    <loc>https://your-firebase-domain.web.app/product</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://copmap.in/features</loc>
+    <loc>https://your-firebase-domain.web.app/features</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://copmap.in/about</loc>
+    <loc>https://your-firebase-domain.web.app/about</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://copmap.in/contact</loc>
+    <loc>https://your-firebase-domain.web.app/contact</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://copmap.in/legal</loc>
+    <loc>https://your-firebase-domain.web.app/legal</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

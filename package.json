@@ -9,7 +9,10 @@
     "build:analyze": "vite build --mode analyze",
     "lint": "eslint .",
     "preview": "vite preview",
-    "serve": "vite preview --port 4173"
+    "serve": "vite preview --port 4173",
+    "firebase:build": "npm run build && firebase deploy --only hosting",
+    "firebase:preview": "npm run build && firebase hosting:channel:deploy preview",
+    "firebase:init": "firebase init hosting"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
